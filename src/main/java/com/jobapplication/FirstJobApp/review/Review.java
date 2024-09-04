@@ -1,5 +1,6 @@
-package com.jobapplication.FirstJobApp.job;
+package com.jobapplication.FirstJobApp.review;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.jobapplication.FirstJobApp.company.Company;
 
 import jakarta.persistence.Entity;
@@ -9,33 +10,18 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-//@Table(name = "job_table")
-public class Job {
+public class Review {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String title;
 	private String description;
-	private String minSalary;
-	private String maxSalary;
-	private String location;
+	private Double rating;
 	
 	@ManyToOne
+	@JsonIgnore
 	private Company company;
-	
-	public Job() {
-		
-	}
-	public Job(Long id, String title, String description, String minSalary, String maxSalary, String location) {
-		super();
-		this.id = id;
-		this.title = title;
-		this.description = description;
-		this.minSalary = minSalary;
-		this.maxSalary = maxSalary;
-		this.location = location;
-	}
 	
 	public Long getId() {
 		return id;
@@ -55,23 +41,22 @@ public class Job {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getMinSalary() {
-		return minSalary;
+	public Double getRating() {
+		return rating;
 	}
-	public void setMinSalary(String minSalary) {
-		this.minSalary = minSalary;
+	public void setRating(Double rating) {
+		this.rating = rating;
 	}
-	public String getMaxSalary() {
-		return maxSalary;
+
+	public Review() {
+		
 	}
-	public void setMaxSalary(String maxSalary) {
-		this.maxSalary = maxSalary;
-	}
-	public String getLocation() {
-		return location;
-	}
-	public void setLocation(String location) {
-		this.location = location;
+	public Review(Long id, String title, String description, Double rating) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.description = description;
+		this.rating = rating;
 	}
 	public Company getCompany() {
 		return company;
@@ -79,6 +64,7 @@ public class Job {
 	public void setCompany(Company company) {
 		this.company = company;
 	}
-
+	
+	
 	
 }
