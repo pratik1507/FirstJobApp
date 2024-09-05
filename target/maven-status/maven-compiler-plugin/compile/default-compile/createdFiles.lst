@@ -1,0 +1,16 @@
+com\jobapplication\FirstJobApp\job\JobController.class
+com\jobapplication\FirstJobApp\job\JobRepository.class
+com\jobapplication\FirstJobApp\company\CompanyRepository.class
+com\jobapplication\FirstJobApp\company\impl\CompanyServiceImpl.class
+com\jobapplication\FirstJobApp\company\Company.class
+com\jobapplication\FirstJobApp\company\CompanyController.class
+com\jobapplication\FirstJobApp\company\CompanyService.class
+com\jobapplication\FirstJobApp\job\impl\JobServiceImpl.class
+com\jobapplication\FirstJobApp\review\impl\ReviewServiceImpl.class
+com\jobapplication\FirstJobApp\review\ReviewService.class
+com\jobapplication\FirstJobApp\job\JobService.class
+com\jobapplication\FirstJobApp\FirstJobAppApplication.class
+com\jobapplication\FirstJobApp\review\ReviewController.class
+com\jobapplication\FirstJobApp\review\Review.class
+com\jobapplication\FirstJobApp\job\Job.class
+com\jobapplication\FirstJobApp\review\ReviewRepository.class
